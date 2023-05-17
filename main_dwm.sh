@@ -7,5 +7,5 @@ do
 	ton=`amixer get Master | awk -F '[][]' '/%/ { print $2 }' | awk '{ print $1 }'`
 	load=`cat /proc/loadavg | awk '{print $3}'`
 
-	xsetroot -name """$( printf " | "; printf "L15m: $load" ; printf " | ";  printf "Ton: $ton"; printf " | " ; printf "Bat: $bat" ; printf " | " ; printf "Time: $date" ; printf " |" ; )"""
+	xsetroot -name """$( printf "| "; printf "L15m: $load" ; printf " | ";  printf "Ton: $ton"; printf " | " ; printf "Bat: $bat" ; printf " | " ; printf "Time: $date" ; printf " |" ; )"""
 done 
